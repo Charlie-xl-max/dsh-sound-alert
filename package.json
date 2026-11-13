@@ -1,0 +1,51 @@
+{
+  "name": "dsh-sound-alert",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Chimes in the Web UI when an agent waits for your approval or finishes a turn.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charlie-xl-max/dsh-sound-alert.git"
+  },
+  "homepage": "https://github.com/Charlie-xl-max/dsh-sound-alert#readme",
+  "bugs": {
+    "url": "https://github.com/Charlie-xl-max/dsh-sound-alert/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "notification",
+    "sound"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-session"
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Sound alerts",
+    "description": "Plays a short chime in the Web UI when an agent starts waiting for you (tool approval, question, plan review) and a different chime when a running turn finishes. Notes are synthesized in the browser, so the plugin ships no audio files and makes no network requests. It only rings while the page is open, and a muted system or tab keeps it silent.",
+    "detail": "docs/DETAIL.md"
+  }
+}
